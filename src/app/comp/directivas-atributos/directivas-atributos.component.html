@@ -1,0 +1,51 @@
+<p [style.font-size]="'50px'"
+  [style.margin]="'20px'"
+  [style.color]="'white'"
+  [style.background-color]="'blue'"
+  [style.padding]="'30px'">
+  {{textoStyle}}
+</p>
+<p [ngStyle]="{'background-color':'green',
+              'color':'white',
+              'margin':'20px',
+              'padding':'30px',
+              'font-size':'50px'}">
+  {{textoNgStyle}}
+</p>
+
+<ul *ngFor="let fruta of frutas">
+  <li [ngStyle]="{'color':devuelveColor(fruta.beneficios)}">{{fruta.nombre}}</li>
+</ul>
+
+<hr/>
+
+<p [ngClass]="['fs-2','alert alert-primary','shadow','border-2','p-2','m-2']">{{textoNgClass}}</p>
+
+<button [ngClass]="['btn btn-primary']">{{textoNgClass}}</button>
+
+<p [ngClass]="'lead fs-2 text-primary'">{{textoNgClass}}</p>
+
+<div [ngClass]="fnStilo()">
+  <p>Funcion con ngClass</p>
+</div>
+
+<button [ngClass]="['btn btn-info']" (click)="cambiaEstiloClase()">{{textoCambiarEstilo}}</button>
+
+<hr/>
+
+<p [class.text-primary]="true" [class.fs-2]="true">texto con primary</p>
+
+<p [class.text-danger]="true" [class.fs-2]="true">Texto con danger</p>
+
+<ul *ngFor="let fruta of frutas">
+
+  <li [class.text-primary]="fruta.beneficios==='vitamina A'"
+      [class.text-danger]="fruta.beneficios==='vitamina B'"
+      [class.text-success]="fruta.beneficios==='vitamina C'"
+      [ngClass]="'lead fs-2'"
+  >
+      {{fruta.nombre}}
+
+  </li>
+
+</ul>

@@ -1,0 +1,23 @@
+<button class="btn btn-danger btn-sm" (click)="mostrarCursos()">{{textoBtnMuestraCursos}}</button>
+  <div *ngIf="muestraCursos">
+    <p>Total de cursos: {{cursos.length}}</p>
+    <div class="row">
+      <div class="col col-3" *ngFor="let curso of cursos">
+        <div class="card shadow border border-primary border-3 m-2">
+          <div class="card-header bg-primary text-white">
+            Curso: {{curso.nombre}}
+          </div>
+          <div class="card-body">
+            Dificultad: {{curso.dificultad}}
+          </div>
+          <div class="card-footer">
+            Descripcion: {{curso.descripcion}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </div>

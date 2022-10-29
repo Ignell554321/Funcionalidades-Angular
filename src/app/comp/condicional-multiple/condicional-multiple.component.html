@@ -1,0 +1,8 @@
+<button class="btn btn-warning btn-sm" (click)="muestraSgteEvaluacion()">{{textoBotonEvaluacion}} {{evaluacion}}</button>
+<div [ngSwitch]="evaluacion">
+  <div *ngSwitchCase="1"><p class="fs-2 lead">Examen de Ecmajs</p></div>
+  <div *ngSwitchCase="2"><p class="fs-2 lead">Examen de React</p></div>
+  <div *ngSwitchCase="3"><p class="fs-2 lead">Examen de Angular</p></div>
+  <div *ngSwitchDefault><p class="fs-2 lead text-danger">Termino el examen</p></div>
+</div>
+

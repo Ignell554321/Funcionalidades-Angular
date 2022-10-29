@@ -1,0 +1,46 @@
+<p class="lead fs-2 text-primary">Revision de Pipes</p>
+
+<div class="border border-2 border-primary p-2 alert alert-primary">
+    <p class="fs-2"> Sin el PIPE lowerCase: {{descripcion }}</p>
+    <p class="fs-2"> Con el PIPE lowerCase: {{descripcion | lowercase}}</p>
+</div>
+
+<div class="border border-2 border-primary p-2 alert alert-primary">
+  <p class="fs-2"> Sin el PIPE uppercase: {{descripcion }}</p>
+  <p class="fs-2"> Con el PIPE uppercase: {{descripcion | uppercase}}</p>
+</div>
+
+<hr/>
+
+<div class="border border-2 border-primary p-2 alert alert-primary">
+    <p class="fs-2">Sin el PIPE number: {{precio}}</p>
+    <p class="fs-2">Con el PIPE number (por default 3 decimales): {{precio | number}}</p>
+    <p class="fs-2">Con el PIPE number (por default 2 decimales): {{precio | number:'1.0-2'}}</p>
+    <p class="fs-2">Con el PIPE number (por default 4 decimales): {{precio | number:'1.0-4'}}</p>
+</div>
+
+<hr/>
+
+<div class="border border-2 border-primary p-2 alert alert-primary">
+  <p class="fs-2">Sin el PIPE percent IGV: {{IGV}}</p>
+  <p class="fs-2">Con el PIPE percent IGV: {{IGV | percent}}</p>
+  <p class="fs-2">Con el PIPE percent TCEA: {{TCEA | percent}}</p>
+</div>
+
+<hr/>
+
+<div class="border border-2 border-primary p-2 alert alert-primary">
+  <p class="fs-2">SIN el PIPE number sueldo {{sueldoFutbolista}}</p>
+  <p class="fs-2">Con el PIPE number (separado por 3 cifras) {{sueldoFutbolista | number:'.0-0'}}</p>
+</div>
+
+<hr/>
+
+<div class="border border-2 border-primary p-2 alert alert-primary">
+  <p class="fs-2">SIN el PIPE currency: Ahorro {{ahorro}}</p>
+  <p class="fs-2">Con el PIPE currency(default dolar): Ahorro {{ahorro | currency}}</p>
+  <p class="fs-2">Con el PIPE currency(Japon): Ahorro {{ahorro | currency:'JPY'}}</p>
+</div>
+
+
+

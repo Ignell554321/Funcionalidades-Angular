@@ -1,0 +1,17 @@
+<div class="alert alert-info">
+
+  <button (click)="accederCurso()" class="btn btn-sm btn-primary">{{textoBtnCursoDisponible}}</button>
+    <div *ngIf="cursoDisponible; else noMostrarCurso">
+      <p>Hibernate ORM usando JPA y Spring boot</p>
+    </div>
+
+    <ng-template #noMostrarCurso>
+      <p>No se muestra el curso aun no esta aperturado</p>
+    </ng-template>
+
+
+</div>
+
+
+
+
